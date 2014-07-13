@@ -19,6 +19,12 @@
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>
+  <div class="field">
+    <%= f.label :tags %><br />
+    <% for tag in Tag.all %>
+      <%= f.check_box :tag_ids, { :multiple => true }, tag.id, nil %><%= tag.name %>
+    <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

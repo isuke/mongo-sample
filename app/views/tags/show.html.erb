@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @tag.name %>
+</h1>
+
+<h3>Articles</h3>
+<% for article in @tag.articles %>
+  <p><%= article.name %></p>
+<% end %>
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %>

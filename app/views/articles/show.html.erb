@@ -10,6 +10,11 @@
   <%= @article.content %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <%= @article.tags.map(&:name).join(',') %>
+</p>
+
 <% if @article.comments.any? %>
   <h2>Comments</h2>
   <% for comment in @article.comments %>
